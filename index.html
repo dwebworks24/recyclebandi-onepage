@@ -1,29 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
 
-    <title>Chain App Dev - App Landing Page HTML5 Template</title>
+  <title>Chain App Dev - App Landing Page HTML5 Template</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+  <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 
-  </head>
+</head>
 
 <body>
 
@@ -54,14 +55,17 @@
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="#services">Services</a></li>
               <li class="scroll-to-section"><a href="#about">About</a></li>
-              <li class="scroll-to-section"><a href="#pricing">Pricing</a></li>
-              <li class="scroll-to-section"><a href="#final-overview">Newsletter</a></li>
-              <li><div class="gradient-button"><a id="modal_trigger" href="#modal"><i class="fa fa-sign-in-alt"></i> Sign In Now</a></div></li> 
-            </ul>        
+              <li class="scroll-to-section"><a href="#scrap-services">Services</a></li>
+              <li class="scroll-to-section"><a href="#testmonial">Reviews</a></li>
+              <li class="scroll-to-section"><a href="#contact">contact</a></li>
+              <li>
+                <div class="gradient-button"><a id="modal_trigger" href="#modal"><i class="fa fa-sign-in-alt"></i> Sign
+                    In Now</a></div>
+              </li>
+            </ul>
             <a class='menu-trigger'>
-                <span>Menu</span>
+              <span>Menu</span>
             </a>
             <!-- ***** Menu End ***** -->
           </nav>
@@ -70,68 +74,56 @@
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
-  
-  <div id="modal" class="popupContainer" style="display:none;">
+
+  <div id="modal" class="popupContainer1" style="display:none;">
     <div class="popupHeader">
-        <span class="header_title">Login</span>
-        <span class="modal_close"><i class="fa fa-times"></i></span>
+      <span class="header_title">Login</span>
+      <span class="modal_close"><i class="fa fa-times"></i></span>
+      <form>
+        <br />
+        <label>Email Address</label>
+        <input type="email" class="form-control" placeholder="please enter username"/>
+        <br />
+
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="please enter password"/>
+         <br/>
+        <div class="action_btns">
+          <div class="one_half"><a href="#" class="btn back_btn">Login</a>
+          </div>
+          <!-- <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div> -->
+        </div>
+      </form>
     </div>
 
     <section class="popupBody">
-        <!-- Social Login -->
-        <div class="social_login">
-            <div class="">
-                <a href="#" class="social_box fb">
-                    <span class="icon"><i class="fab fa-facebook"></i></span>
-                    <span class="icon_title">Connect with Facebook</span>
+      <!-- Register Form -->
+      <div class="user_register">
+        <form>
+          <label>Full Name</label>
+          <input type="text" />
+          <br />
 
-                </a>
+          <label>Email Address</label>
+          <input type="email" />
+          <br />
 
-                <a href="#" class="social_box google">
-                    <span class="icon"><i class="fab fa-google-plus"></i></span>
-                    <span class="icon_title">Connect with Google</span>
-                </a>
+          <label>Password</label>
+          <input type="password" />
+          <br />
+
+          <div class="checkbox">
+            <input id="send_updates" type="checkbox" />
+            <label for="send_updates">Send me occasional email updates</label>
+          </div>
+
+          <div class="action_btns">
+            <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a>
             </div>
-
-            <div class="centeredText">
-                <span>Or use your Email address</span>
-            </div>
-
-            <div class="action_btns">
-                <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
-                <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
-            </div>
-        </div>
-
-        <!-- Username & Password Login form -->
-  
-
-        <!-- Register Form -->
-        <div class="user_register">
-            <form>
-                <label>Full Name</label>
-                <input type="text" />
-                <br />
-
-                <label>Email Address</label>
-                <input type="email" />
-                <br />
-
-                <label>Password</label>
-                <input type="password" />
-                <br />
-
-                <div class="checkbox">
-                    <input id="send_updates" type="checkbox" />
-                    <label for="send_updates">Send me occasional email updates</label>
-                </div>
-
-                <div class="action_btns">
-                    <div class="one_half"><a href="#" class="btn back_btn"><i class="fa fa-angle-double-left"></i> Back</a></div>
-                    <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
-                </div>
-            </form>
-        </div>
+            <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div>
+          </div>
+        </form>
+      </div>
     </section>
   </div>
 
@@ -144,17 +136,18 @@
               <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                 <div class="row">
                   <div class="col-lg-12">
-                    <h2>Get The Latest App From App Stores</h2>
-                    <p>Chain App Dev is an app landing page HTML5 template based on Bootstrap v5.1.3 CSS layout provided by TemplateMo, a great website to download free CSS templates.</p>
+                    <h2 class="text-light">First Time in Guntur Scrap Collection Service </h2>
+                    <p>Chain App Dev is an app landing page HTML5 template based on Bootstrap v5.1.3 CSS layout provided
+                      by TemplateMo, a great website to download free CSS templates.</p>
                   </div>
-                  <div class="col-lg-12">
+                  <!-- <div class="col-lg-12">
                     <div class="white-button first-button scroll-to-section">
                       <a href="#contact">Free Quote <i class="fab fa-apple"></i></a>
                     </div>
                     <div class="white-button scroll-to-section">
                       <a href="#contact">Free Quote <i class="fab fa-google-play"></i></a>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -169,117 +162,15 @@
     </div>
   </div>
 
-  <div id="about" class="about-us section">
-    <div class="container">
-      <div class="row">
-        
-        <div class="col-lg-12">
-          <div class="section-heading text-center">
-            <h4>Quick <em>Links</em> </h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
-           
-          </div>
-          <div class="quick-links">
-            <div class="">
-              <div class="box-item">
-                <h4><a href="#">Quick Introduction &nbsp;<i class="fa fa-arrow-right"></i> </a></h4>
-              </div>
-            </div>
-            <div class="">
-              <div class="box-item">
-                <h4><a href="#"> Message from our Founder &nbsp;<i class="fa fa-arrow-right"></i></a></h4>
-              </div>
-            </div>
-          </div>
-          <div class="quick-links">
-            <div class="">
-              <div class="box-item">
-                <h4><a href="#">Goals &nbsp;<i class="fa fa-arrow-right"></i></a></h4>
-              </div>
-            </div>
-          </div>
-          <div class="quick-links">
-            <div class="">
-              <div class="box-item">
-                <h4><a href="#">Progress &nbsp;<i class="fa fa-arrow-right"></i></a></h4>
-              </div>
-            </div>
-            <div class="">
-              <div class="box-item">
-                <h4><a href="#">Data Visualization &nbsp;<i class="fa fa-arrow-right"></i></a></h4>
-              </div>
-            </div>
-          </div>
-          <div class="quick-links">
-            <div class="">
-              <div class="box-item">
-                <h4><a href="#">Next Steps &nbsp;<i class="fa fa-arrow-right"></i></a></h4>
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-    
-      </div>
-    </div>
-  </div>
 
-  <div id="services" class="services section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>Quick <em>Links </h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
-            <p>If you need the greatest collection of HTML templates for your business, please visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">TooCSS</a> Blog. If you need to have a contact form PHP script, go to <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more information.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="service-item first-service">
-            <div class="icon"></div>
-            <h4>App Maintenance</h4>
-            <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
-            <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="service-item second-service">
-            <div class="icon"></div>
-            <h4>Rocket Speed of App</h4>
-            <p>You are allowed to use the Chain App Dev HTML template. Feel free to modify or edit this layout.</p>
-            <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="service-item third-service">
-            <div class="icon"></div>
-            <h4>Multi Workflow Idea</h4>
-            <p>If this template is beneficial for your work, please support us <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">a little via PayPal</a>. Thank you.</p>
-            <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div id="pricing" class="pricing-tables">
+  <div id="about" class="pricing-tables">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading">
             <h4>About <em>Recycle Bandi</em></h4>
             <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
           </div>
         </div>
         <div class="col-lg-12">
@@ -288,16 +179,20 @@
             <h4>Interduction</h4>
             <div class="border-button">
               <p class="text-dark" style="font-size: 20px;">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eaque beatae perspiciatis recusandae, quis non adipisci magnam possimus fugiat culpa, quo quaerat harum magni ducimus? Nihil porro eligendi nobis deserunt. Repudiandae aperiam itaque qui consequuntur nam aliquid corporis ab labore molestiae quasi facere beatae voluptatem dignissimos, modi aspernatur sequi inventore voluptas praesentium rerum nostrum possimus obcaecati excepturi autem. Vitae cumque ad saepe voluptas officia doloremque labore optio numquam maxime accusantium id expedita, neque sapiente excepturi exercitationem veritatis quaerat consequuntur! Possimus, ducimus quas officia autem hic repudiandae distinctio nisi minus harum iste. Atque molestias reiciendis commodi repellendus facere voluptatum, assumenda exercitationem?
+                Welcome to Recycl Bandi, where sustainability meets action! As champions of environmental stewardship, we're dedicated
+                to educating, collecting, segregating, and delivering recyclable materials to promote a greener future for all. Join
+                us on our journey towards sustainability and discover how you can make a positive impact on the planet. Together,
+                let's build a brighter, cleaner world for generations to come. Explore our website to learn more and get involved
+                today!"
               </p>
-              <a href="#">Purchase This Plan Now</a>
+              <!-- <a href="#">Purchase This Plan Now</a> -->
             </div>
           </div>
         </div>
-     
+
       </div>
     </div>
-  </div> 
+  </div>
 
 
   <div id="founder" class="pricing-tables">
@@ -307,7 +202,8 @@
           <div class="section-heading">
             <h4>About <em>Founder</em></h4>
             <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et
+              dolore magna.</p>
           </div>
         </div>
         <div class="col-lg-12">
@@ -316,7 +212,14 @@
             <h4>Founder Message</h4>
             <div class="border-button">
               <p class="text-dark" style="font-size: 20px;">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eaque beatae perspiciatis recusandae, quis non adipisci magnam possimus fugiat culpa, quo quaerat harum magni ducimus? Nihil porro eligendi nobis deserunt. Repudiandae aperiam itaque qui consequuntur nam aliquid corporis ab labore molestiae quasi facere beatae voluptatem dignissimos, modi aspernatur sequi inventore voluptas praesentium rerum nostrum possimus obcaecati excepturi autem. Vitae cumque ad saepe voluptas officia doloremque labore optio numquam maxime accusantium id expedita, neque sapiente excepturi exercitationem veritatis quaerat consequuntur! Possimus, ducimus quas officia autem hic repudiandae distinctio nisi minus harum iste. Atque molestias reiciendis commodi repellendus facere voluptatum, assumenda exercitationem?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eaque beatae perspiciatis recusandae, quis
+                non adipisci magnam possimus fugiat culpa, quo quaerat harum magni ducimus? Nihil porro eligendi nobis
+                deserunt. Repudiandae aperiam itaque qui consequuntur nam aliquid corporis ab labore molestiae quasi
+                facere beatae voluptatem dignissimos, modi aspernatur sequi inventore voluptas praesentium rerum nostrum
+                possimus obcaecati excepturi autem. Vitae cumque ad saepe voluptas officia doloremque labore optio
+                numquam maxime accusantium id expedita, neque sapiente excepturi exercitationem veritatis quaerat
+                consequuntur! Possimus, ducimus quas officia autem hic repudiandae distinctio nisi minus harum iste.
+                Atque molestias reiciendis commodi repellendus facere voluptatum, assumenda exercitationem?
               </p>
               <div class="down-content about-founder">
                 <img src="assets/images/client-image.jpg" alt="">
@@ -328,10 +231,118 @@
             </div>
           </div>
         </div>
-     
+
       </div>
     </div>
-  </div> 
+  </div>
+
+
+
+
+  <!-- <div id="quick-links" class="about-us section">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-12">
+          <div class="section-heading text-center">
+            <h4>Quick <em>Links</em> </h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+
+          </div>
+          <div class="quick-links">
+            <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+              <div class="box-item ">
+                <h4><a href="#about" class="scroll-to-section">Quick Introduction &nbsp;<i class="fa fa-arrow-right"></i> </a></h4>
+              </div>
+            </div>
+            <div class="wow fadeIn" data-wow-delay="0.1s">
+              <div class="box-item">
+                <h4><a href="founder" class="scroll-to-section"> Message from our Founder &nbsp;<i class="fa fa-arrow-right"></i></a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="quick-links">
+            <div class="wow fadeIn" data-wow-delay="0.2s">
+              <div class="box-item">
+                <h4><a href="what-next" class="scroll-to-section">Goals &nbsp;<i class="fa fa-arrow-right"></i></a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="quick-links">
+            <div class="wow fadeIn" data-wow-delay="0.3s">
+              <div class="box-item">
+                <h4><a href="final-overview" class="scroll-to-section">Progress &nbsp;<i class="fa fa-arrow-right"></i></a></h4>
+              </div>
+            </div>
+            <div class="wow fadeIn" data-wow-delay="0.3s">
+              <div class="box-item">
+                <h4><a href="testmonial" class="scroll-to-section">Testimonials&nbsp;<i class="fa fa-arrow-right"></i></a></h4>
+              </div>
+            </div>
+          </div>
+          <div class="quick-links">
+            <div class="wow fadeIn" data-wow-delay="0.4s">
+              <div class="box-item">
+                <h4><a href="#contact" class="scroll-to-section">contact &nbsp;<i class="fa fa-arrow-right"></i></a></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+   -->
+
+  <div id="scrap-services" class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Scrap <em>Services</h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>There are 17 SDGs and 169 targets in total. While they are all important and interrelated, some will be more relevant to your business than others. This section can identify the specific SDGs and targets your organization is prioritizing, and demonstrate how they align with your own business strategy and goals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="service-item first-service">
+            <div class="icon"></div>
+            <h4>Schedule pick up</h4>
+            <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+            <div class="text-button">
+              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="service-item second-service">
+            <div class="icon"></div>
+            <h4>Vendor Pick up</h4>
+            <p>You are allowed to use the Chain App Dev HTML template. Feel free to modify or edit this layout.</p>
+            <div class="text-button">
+              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="service-item third-service">
+            <div class="icon"></div>
+            <h4>Society Collaboration</h4>
+            <p>If this template is beneficial for your work, please support us <a rel="nofollow"
+                href="https://paypal.me/templatemo" target="_blank">a little via PayPal</a>. Thank you.</p>
+            <div class="text-button">
+              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
   <div id="what-next" class="services section">
@@ -341,7 +352,10 @@
           <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
             <h4>what's <em>Next </h4>
             <img src="assets/images/heading-line-dec.png" alt="">
-            <p>If you need the greatest collection of HTML templates for your business, please visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">TooCSS</a> Blog. If you need to have a contact form PHP script, go to <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more information.</p>
+            <p>If you need the greatest collection of HTML templates for your business, please visit <a rel="nofollow"
+                href="https://www.toocss.com/" target="_blank">TooCSS</a> Blog. If you need to have a contact form PHP
+              script, go to <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more
+              information.</p>
           </div>
         </div>
       </div>
@@ -372,7 +386,8 @@
           <div class="service-item third-service">
             <div class="icon"></div>
             <h4>Multi Workflow Idea</h4>
-            <p>If this template is beneficial for your work, please support us <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">a little via PayPal</a>. Thank you.</p>
+            <p>If this template is beneficial for your work, please support us <a rel="nofollow"
+                href="https://paypal.me/templatemo" target="_blank">a little via PayPal</a>. Thank you.</p>
             <div class="text-button">
               <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
             </div>
@@ -381,125 +396,156 @@
       </div>
     </div>
   </div>
-<section id="final-overview">
-  <div  class="services section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>final <em>overview </h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
-            <p>If you need the greatest collection of HTML templates for your business, please visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">TooCSS</a> Blog. If you need to have a contact form PHP script, go to <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more information.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="service-item first-service">
-            <div class="icon"></div>
-            <h4>App Maintenance</h4>
-            <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
-            <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+  <section id="final-overview bg-dark">
+    <div class="services section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+              <h4>final <em>Reviews </h4>
+              <img src="assets/images/heading-line-dec.png" alt="">
+              <p>If you need the greatest collection of HTML templates for your business, please visit <a rel="nofollow"
+                  href="https://www.toocss.com/" target="_blank">TooCSS</a> Blog. If you need to have a contact form PHP
+                script, go to <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more
+                information.</p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="service-item second-service">
-            <div class="icon"></div>
-            <h4>Rocket Speed of App</h4>
-            <p>You are allowed to use the Chain App Dev HTML template. Feel free to modify or edit this layout.</p>
-            <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="service-item first-service">
+              <div class="icon"></div>
+              <h4>App Maintenance</h4>
+              <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+              <div class="text-button">
+                <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="service-item third-service">
-            <div class="icon"></div>
-            <h4>Multi Workflow Idea</h4>
-            <p>If this template is beneficial for your work, please support us <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">a little via PayPal</a>. Thank you.</p>
-            <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+          <div class="col-lg-4">
+            <div class="service-item second-service">
+              <div class="icon"></div>
+              <h4>Rocket Speed of App</h4>
+              <p>You are allowed to use the Chain App Dev HTML template. Feel free to modify or edit this layout.</p>
+              <div class="text-button">
+                <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="service-item third-service">
+              <div class="icon"></div>
+              <h4>Multi Workflow Idea</h4>
+              <p>If this template is beneficial for your work, please support us <a rel="nofollow"
+                  href="https://paypal.me/templatemo" target="_blank">a little via PayPal</a>. Thank you.</p>
+              <div class="text-button">
+                <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <div id="testmonial" class="services section">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>final <em>overview </h4>
+            <h4>Customer <em>Reviews </h4>
             <img src="assets/images/heading-line-dec.png" alt="">
-            <p>If you need the greatest collection of HTML templates for your business, please visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">TooCSS</a> Blog. If you need to have a contact form PHP script, go to <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more information.</p>
+            <p>If you need the greatest collection of HTML templates for your business, please visit <a rel="nofollow"
+                href="https://www.toocss.com/" target="_blank">TooCSS</a> Blog. If you need to have a contact form PHP
+              script, go to <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more
+              information.</p>
           </div>
         </div>
       </div>
       <div class="row p-3">
         <div class="owl-carousel">
-            <div class="service-item first-service">
-              <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
-              <div class="text-button testmonial">
-                <div class="icon">
-                  <img src="assets/images/client-image.jpg" alt="">
-                </div>
-                <h4>Dinesh</h4>
+          <div class="service-item first-service">
+            <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+            <div class="text-button testmonial">
+              <div class="icon">
+                <img src="assets/images/client-image.jpg" alt="">
               </div>
+              <h4>Dinesh</h4>
             </div>
-            <div class="service-item first-service">
-              <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
-              <div class="text-button testmonial">
-                <div class="icon">
-                  <img src="assets/images/client-image.jpg" alt="">
-                </div>
-                <h4>SithaRam </h4>
+          </div>
+          <div class="service-item first-service">
+            <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+            <div class="text-button testmonial">
+              <div class="icon">
+                <img src="assets/images/client-image.jpg" alt="">
               </div>
+              <h4>SithaRam </h4>
             </div>
-            <div class="service-item first-service">
-              <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
-              <div class="text-button testmonial">
-                <div class="icon">
-                  <img src="assets/images/client-image.jpg" alt="">
-                </div>
-                <h4>ManiDeep</h4>
+          </div>
+          <div class="service-item first-service">
+            <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+            <div class="text-button testmonial">
+              <div class="icon">
+                <img src="assets/images/client-image.jpg" alt="">
               </div>
+              <h4>ManiDeep</h4>
             </div>
+          </div>
         </div>
-      
+
+      </div>
+    </div>
+  </div>
+
+   <div id="contact" class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12 mb-3">
+                    <h2>Connect With Us</h2>
+                  </div>
+                  <div class="col-lg-12 contact-form">
+                    <form action="#">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label for="fname">First Name</label>
+                          <input type="text" id="fname" class="form-control" name="firstname" placeholder="Your first name">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="fname">last Name</label>
+                          <input type="text" id="lname" class="form-control" name="lastname" placeholder="Your last name">
+                        </div>
+                      </div>
+                      <label for="lname">Email</label>
+                      <input type="text" id="lname" class="form-control" name="email" placeholder="Your valid email">
+                
+                      <label for="subject">Subject</label>
+                      <textarea id="subject" class="form-control" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                     
+
+                      <div class="gradient-button"><a id="modal_trigger" href="#modal">submit <i class="fa fa-sign-in-alt"></i></a></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="assets/images/contact-us.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <footer id="newsletter bg-dark">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading">
-            <h4>Join our mailing list to receive the news &amp; latest trends</h4>
-          </div>
-        </div>
-        <div class="col-lg-6 offset-lg-3">
-          <form id="search" action="#" method="GET">
-            <div class="row">
-              <div class="col-lg-6 col-sm-6">
-                <fieldset>
-                  <input type="address" name="address" class="email" placeholder="Email Address..." autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-6 col-sm-6">
-                <fieldset>
-                  <button type="submit" class="main-button">Subscribe Now <i class="fa fa-angle-right"></i></button>
-                </fieldset>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
       <div class="row">
         <div class="col-lg-3">
           <div class="footer-widget">
@@ -549,12 +595,13 @@
             <div class="logo">
               <img src="assets/images/white-logo.png" alt="">
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore.</p>
           </div>
         </div>
         <div class="col-lg-12">
           <div class="copyright-text">
-            <p>Copyright © 2022 Chain App Dev Company. All Rights Reserved. </p>
+            <p>Copyright © 2022 Recycle Bandi. All Rights Reserved. </p>
           </div>
         </div>
       </div>
@@ -575,4 +622,5 @@
   <script src="owlcarousel/owl.carousel.min.js"></script>
 
 </body>
+
 </html>

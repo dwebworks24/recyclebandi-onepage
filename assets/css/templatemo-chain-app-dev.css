@@ -1328,7 +1328,7 @@ The Clients
 
 .pricing-tables  .section-heading {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .pricing-tables  .section-heading p {
@@ -2234,7 +2234,22 @@ responsive
     margin: 2px;
     text-align: justify;
   }
+  .popupHeader {
+    background: rgb(19,175,240);
+    background: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
+    position: relative;
+    /* padding: 50px 25px; */
+    border-bottom: 1px solid #DDD;
+    font-weight: bold;
+    width: 360px;
+    margin-left: -20px;
+  }
+  .action_btns .back_btn{
+    background-color: whitesmoke;
+    color:  rgb(19,175,240);
+  }
 }
+
 .about-thumb{
   padding: 10px 20px !important;
   color: #fff !important;
@@ -2259,4 +2274,73 @@ responsive
 .quick-links{
   display: flex;
   justify-content: center;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+.contact-form .form-control{
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+  background-color: #fff;
+  outline: none;
+}
+
+
+
+@media (min-width: 1200px) {
+  .popupHeader {
+    background: rgb(19,175,240);
+    background: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
+    position: relative;
+    padding: 50px 25px;
+    border-bottom: 1px solid #DDD;
+    font-weight: bold;
+    width: 450px;
+  }
+  .popupContainer{
+    width: 450px;
+    background: #e2e222;
+  }
+
+  .action_btns .back_btn{
+    background-color: whitesmoke;
+    color:  rgb(19,175,240);
+  }
+  .popupHeader .header_title{
+    text-align: center !important;
+    margin-left: 40%;
+    font-size: 25px;
+    color: whitesmoke;
+  }
+  .popupHeader form label{
+    color: white;
+    font-size: smaller;
+  }
+  .popupHeader .action_btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
