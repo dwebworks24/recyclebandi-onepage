@@ -53,6 +53,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'core.urls'
+AUTH_USER_MODEL = 'app.Users'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = "app" 
+LOGOUT_REDIRECT_URL = "app"
 
 TEMPLATES = [
     {
