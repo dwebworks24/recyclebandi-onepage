@@ -1,3 +1,4 @@
+{%load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,14 +16,14 @@
   <title>Chain App Dev - App Landing Page HTML5 Template</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
-  <link rel="stylesheet" href="assets/css/animated.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-  <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="{% static 'assets/css/templatemo-chain-app-dev.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+  <link rel="stylesheet" href="{% static 'owlcarousel/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'owlcarousel/owl.theme.default.min.css' %}">
 
 </head>
 
@@ -49,7 +50,7 @@
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo">
-              <img src="assets/images/logo.png" alt="Chain App Dev">
+              <img src="{% static 'assets/images/logo.png' %}" alt="Chain App Dev">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
@@ -153,7 +154,7 @@
             </div>
             <div class="col-lg-6">
               <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/images/slider-dec.png" alt="">
+                <img src="{% static 'assets/images/slider-dec.png' %}" alt="">
               </div>
             </div>
           </div>
@@ -170,7 +171,7 @@
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading">
             <h4>About <em>Recycle Bandi</em></h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
+            <img src="{% static 'assets/images/heading-line-dec.png' %}" alt="">
           </div>
         </div>
         <div class="col-lg-12">
@@ -201,7 +202,7 @@
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading">
             <h4>About <em>Founder</em></h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
+            <img src="{% static 'assets/images/heading-line-dec.png' %}" alt="">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et
               dolore magna.</p>
           </div>
@@ -222,7 +223,7 @@
                 Atque molestias reiciendis commodi repellendus facere voluptatum, assumenda exercitationem?
               </p>
               <div class="down-content about-founder">
-                <img src="assets/images/client-image.jpg" alt="">
+                <img src="{% static 'assets/images/client-image.jpg' %}" alt="">
                 <div class="">
                   <h4>Dileep Kumar</h4>
                   <span>Founder </span>
@@ -300,7 +301,7 @@
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
             <h4>Scrap <em>Services</h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
+            <img src="{% static 'assets/images/heading-line-dec.png' %}" alt="">
             <p>There are 17 SDGs and 169 targets in total. While they are all important and interrelated, some will be more relevant to your business than others. This section can identify the specific SDGs and targets your organization is prioritizing, and demonstrate how they align with your own business strategy and goals.</p>
           </div>
         </div>
@@ -351,7 +352,7 @@
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
             <h4>what's <em>Next </h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
+            <img src="{% static 'assets/images/heading-line-dec.png' %}" alt="">
             <p>If you need the greatest collection of HTML templates for your business, please visit <a rel="nofollow"
                 href="https://www.toocss.com/" target="_blank">TooCSS</a> Blog. If you need to have a contact form PHP
               script, go to <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more
@@ -454,7 +455,7 @@
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
             <h4>Customer <em>Reviews </h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
+            <img src="{% static 'assets/images/heading-line-dec.png' %}" alt="">
             <p>If you need the greatest collection of HTML templates for your business, please visit <a rel="nofollow"
                 href="https://www.toocss.com/" target="_blank">TooCSS</a> Blog. If you need to have a contact form PHP
               script, go to <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more
@@ -535,7 +536,7 @@
             </div>
             <div class="col-lg-6">
               <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/images/contact-us.png" alt="">
+                <img src="{% static 'assets/images/contact-us.png' %}" alt="">
               </div>
             </div>
           </div>
@@ -610,16 +611,16 @@
 
 
   <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/animation.js' %}"></script>
+  <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+  <script src="{% static 'assets/js/popup.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
 
-  <script src="jquery.min.js"></script>
-  <script src="owlcarousel/owl.carousel.min.js"></script>
+  <script src="{% static 'jquery.min.js' %}"></script>
+  <script src="{% static 'owlcarousel/owl.carousel.min.js' %}"></script>
 
 </body>
 
