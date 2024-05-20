@@ -20,5 +20,25 @@ class AdminUserlist(admin.ModelAdmin):
         return response
     export_to_csv.short_description = "Download selected as csv"
 
+class AdminShopOwner(admin.ModelAdmin):
+    list_display=('id','shopowner_number')
+
+
+class AdminWasteType(admin.ModelAdmin):
+    list_display=('id','quantity','wastename','price')
+
+
+class AdminPickupTransaction(admin.ModelAdmin):
+    list_display=('id','pickup_date','shop_owner','lifted_status','total_pointes')
+
+
+class AdminPickupWastData(admin.ModelAdmin):
+    list_display=('id','waste_type','quantity','pointes','get_shop_owner')
+    def get_shop_owner(self, obj):
+        return obj.pickup_transaction.shop_owner
 
 admin.site.register(Users,AdminUserlist)
+admin.site.register(ShopOwner,AdminShopOwner)
+admin.site.register(WasteType,AdminWasteType)
+admin.site.register(PickupTransaction,AdminPickupTransaction)
+admin.site.register(PickupWastData,AdminPickupWastData)

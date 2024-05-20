@@ -1,0 +1,70 @@
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title fw-semibold mb-4">Add New Transaction</h5>
+            <form>
+                <div class="row">
+                    <div class="" style="width: 40%;">
+                        <label for="firstname" class="form-label">Owner</label>
+                        <select class="form-select" id="Select2" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            {% for item in owners %}
+                            <option value={{item.id}}>{{item.first_name}}</option>
+                            {% endfor%}
+                           
+                          </select>
+                    </div>
+                    <div class="mt-4">
+                        <label for="shop_name" class="form-label">Given Bags</label><br/>
+                        <label class="form-check-label" for="gridRadios2">
+                            YES
+                          </label>
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>&nbsp;&nbsp;          
+                        <label class="form-check-label" for="gridRadios2">
+                            NO
+                          </label>
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    </div>
+                    <div class="mt-4">
+                        <label for="shop_name" class="form-label">Lifted status</label><br/>
+                        <label class="form-check-label" for="gridRadios23">
+                            YES
+                          </label>
+                        <input class="form-check-input" type="radio" name="gridRadios1" id="gridRadios3" value="option1" checked>&nbsp;&nbsp;          
+                        <label class="form-check-label" for="gridRadios4">
+                            NO
+                          </label>
+                        <input class="form-check-input" type="radio" name="gridRadios1" id="gridRadios4" value="option2">
+                    </div>
+
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
+                        <label for="firstname" class="form-label">Waste Type</label>
+                        <select class="form-select" id="waste_type_select2" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            {% for item in waste %}
+                            <option value={{item.id}}>{{item.wastename}}|{{item.price}}</option>
+                            {% endfor%}
+                           
+                          </select>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mt-4">
+                        <label for="lastname" class="form-label">Quantity</label>
+                      <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Please Enter Last name" aria-label="Last name">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 my-auto">
+                        <button type="submit" class="btn btn-primary mt-5">+ADD</button>
+                    </div>
+
+                </div>
+                <button type="submit" class="btn btn-primary mt-5">Submit</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

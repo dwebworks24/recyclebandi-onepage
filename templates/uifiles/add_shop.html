@@ -1,0 +1,71 @@
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title fw-semibold mb-4">Add New Shop Owner</h5>
+              <form>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                        <label for="firstname" class="form-label">Ownamer First Name</label>
+                      <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Please Enter First name" aria-label="First name">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                        <label for="lastname" class="form-label">Ownamer Last Name</label>
+                      <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Please Enter Last name" aria-label="Last name">
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                        <label for="inputEmail4" class="form-label">Ownamer Email</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Please Enter  email" aria-label="Last name">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                      <input type="text" class="form-control" id="phone" name="phone" placeholder="Please Enter  phone" aria-label="phone">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                        <label for="shop_name" class="form-label">Shop Name</label>
+                      <input type="text" class="form-control" id="shop_name" name="shop_name" placeholder="Please Enter Shop Name" aria-label="Last name">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                        <label for="shop_name" class="form-label">RCB Aggred</label><br/>
+                        <label class="form-check-label" for="gridRadios2">
+                            Aggre
+                          </label>
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>&nbsp;&nbsp;          
+                        <label class="form-check-label" for="gridRadios2">
+                            Not Aggre
+                          </label>
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                        <label for="aera" class="form-label">Aera</label>
+                      <input type="text" class="form-control" id="aera" name="aera" placeholder="Please Enter aera name" aria-label="aera">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                        <label for="city" class="form-label">city</label>
+                      <input type="text" class="form-control" id="city" name="city" placeholder="Please Enter city name" aria-label="city">
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                        <label for="state" class="form-label">state</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Please Enter  email" aria-label="email">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 mb-3">
+                        <label for="zipcode" class="form-label">zip code</label>
+                      <input type="email" class="form-control" id="zip_code" name="zip_code" placeholder="Please Enter  zip code" aria-label="zipcode">
+                    </div>
+                  </div>
+            
+              
+              
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

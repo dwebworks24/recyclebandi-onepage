@@ -78,3 +78,64 @@ class Users(AbstractBaseUser, PermissionsMixin):
     def has_module_perms(self, app_label):
          return True
 
+
+class ShopOwner(models.Model):
+    shopowner_number = models.CharField(max_length=255,unique=True,default='')
+    user = models.ForeignKey('Users', models.DO_NOTHING, null=False,blank=False,related_name='created_user',db_column='users_id')
+    shop_name = models.CharField(max_length=255)
+    area = models.CharField(max_length=255)
+    city = models.CharField(max_length=255)
+    state = models.CharField(max_length=255)
+    points = models.DecimalField(max_digits=10, decimal_places=2)
+    rcb_agreed = models.BooleanField(default=True)
+    created_by = models.ForeignKey('Users', models.DO_NOTHING, null=False,blank=False,related_name='created_owner',db_column='created_by')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} - {self.shop_name}"
+    class Meta:
+        managed = True
+        db_table = 'owner_details'
+
+
+
+class WasteType(models.Model):
+    wastename = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='waste_images/', blank=True, null=True)
+    quantity = models.CharField(max_length=255,default="kg")
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    created_by = models.ForeignKey('Users', models.DO_NOTHING, null=False,blank=False,related_name='waste_type',db_column='created_by')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.wastename}"
+    class Meta:
+        managed = True
+        db_table = 'waste_type'
+
+
+class PickupTransaction(models.Model):
+    shop_owner = models.ForeignKey('ShopOwner', models.DO_NOTHING, null=False,blank=False,db_column='shop_owner_id')
+    given_bags = models.BooleanField(default=True)
+    lifted_status = models.BooleanField(default=True)
+    total_pointes = models.DecimalField(max_digits=10, decimal_places=2,null=True,blank=True)
+    pickup_date = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    created_by = models.ForeignKey('Users', models.DO_NOTHING, null=False,blank=False,related_name='created_waste_type',db_column='created_by')
+
+    class Meta:
+        managed = True
+        db_table = 'pickup_transaction'
+
+class PickupWastData(models.Model):
+    waste_type = models.ForeignKey('WasteType', models.DO_NOTHING, null=False,blank=False,db_column='waste_type_id')
+    quantity = models.CharField(max_length=255)
+    pointes = models.DecimalField(max_digits=10, decimal_places=2)
+    pickup_transaction = models.ForeignKey('PickupTransaction', models.DO_NOTHING, null=False,blank=False,db_column='pickup_transaction_id')
+    
+    class Meta:
+        managed = True
+        db_table = 'pickup_waste_data'

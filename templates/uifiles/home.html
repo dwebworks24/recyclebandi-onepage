@@ -81,18 +81,18 @@
       <span class="header_title">Login</span>
       <span class="modal_close"><i class="fa fa-times"></i></span>
       <form>
+        {% csrf_token %}
         <br />
         <label>Email Address</label>
-        <input type="email" class="form-control" placeholder="please enter username"/>
+        <input type="email" id="email" class="form-control" placeholder="please enter username"/>
         <br />
 
         <label>Password</label>
-        <input type="password" class="form-control" placeholder="please enter password"/>
+        <input type="password" id="password" class="form-control" placeholder="please enter password"/>
          <br/>
         <div class="action_btns">
-          <div class="one_half"><a href="#" class="btn back_btn">Login</a>
+          <div class="one_half"><a href="#" class="btn back_btn" onclick="submite_login()">Login</a>
           </div>
-          <!-- <div class="one_half last"><a href="#" class="btn btn_red">Register</a></div> -->
         </div>
       </form>
     </div>
@@ -618,7 +618,7 @@
   <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
   <script src="{% static 'assets/js/popup.js' %}"></script>
   <script src="{% static 'assets/js/custom.js' %}"></script>
-
+  <script src="{% static 'assets/js/style.js' %}"></script>
   <script src="{% static 'jquery.min.js' %}"></script>
   <script src="{% static 'owlcarousel/owl.carousel.min.js' %}"></script>
 
