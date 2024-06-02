@@ -301,10 +301,10 @@ width: 50px;
 * 02.START BOOTSTRAP NAVIGATION OVERRIDES
 * ----------------------------------------------------------------------------------------
 */
-.site-logo img{
+/* .site-logo img{
 	width: 180px;
 	height: auto;
-}
+} */
 .bg-faded {
 	background-color:transparent;
 	transition: all 0.5s ease 0s;
@@ -470,7 +470,8 @@ color: #fff !important;
 * ----------------------------------------------------------------------------------------
 */
 .home_bg {
-    height: 700px;
+    /* height: 700px; */
+	height: 100%;
     position: relative;
 }
 .home_bg:before {
@@ -1837,9 +1838,9 @@ display:none !important;
 	background-size: 100% 100%;
 }
 .footer_logo {padding-top:160px;}
-.footer_logo img{
+/* .footer_logo img{
 width:150px;
-}
+} */
 .footer_logo p {
 	color: #a9b4c7;
 	margin-top: 10px;

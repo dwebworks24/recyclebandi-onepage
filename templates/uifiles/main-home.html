@@ -60,11 +60,10 @@
 				<div class="row menu_bg">
 					<div class="col-lg-2 col-md-3 col-sm-4">
 						<div class="site-logo">
-							<a class="navbar-logo" href="index.html"><img src="{% static 'main_assets/img/logo.png' %}" alt=""></a>
+							<a class="navbar-logo" href="index.html"><img src="{% static 'main_assets/img/recycle.png' %}" style="width:2opx!important;height:80px;" alt=""></a>
 						</div>
-					</div>
-					<!--- END Col -->					
-					<div class="col-lg-8 col-md-9 col-sm-8">
+					</div><!--- END Col -->					
+					<div class="col-lg-10 col-md-9 col-sm-8">
 						<div class="header_right">
 							<nav id="main-menu" class="ml-auto">
 								<ul>
@@ -79,27 +78,19 @@
 							</nav>
 							<div id="mobile_menu"></div>
 						</div>
-					</div>
-					<!--- END COL -->
-					<div class="col-lg-2 col-md-3 col-sm-4 m-auto">
-						<div class="site-logo mt-2">
-							<a class="navbar-logo login-icon" href="/login/"><i class="fa fa-user text-light " title="Facebook"></i></a>
-						</div>
-					</div>	
-									
+					</div><!--- END COL -->					
 				</div><!--- END ROW -->
 			</div><!--- END CONTAINER -->
 		</div> 	  
 		<!-- END NAVBAR -->
-
 		<!-- START HOME -->
-		<section data-stellar-background-ratio="0.3" id="home" class="home_bg">
+		<section data-stellar-background-ratio="0.3" id="home" class="home_bg" style="background-image: url(../../static/main_assets/img/bg/topbanner.png);  background-size:cover; background-position: center center;">
 			<div class="container">
 				<div class="row">
 				  <div class="col-lg-12 col-sm-12 col-xs-12 text-center">
 					<div class="hero-text">
-						<h1>Design is so simple</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+						<h1>Recycle Bandi</h1>
+						<p>Let’s Start Segregating Recyclables</p>
 						<a href="#contact" class="page-scroll btn btn-default btn-home-bg">Contact us</a>		
 					</div>
 				  </div><!--- END COL -->				  
@@ -145,22 +136,27 @@
 		<!-- END ABOUT -->	
 		
 		<!-- START ABOUT CONTENT -->
-		<section class="about_content section-padding">
+		<section class="about_content section-padding" style="background: #f8f4ef;">
 		   <div class="container">
-				<div class="row">					
+				<div class="row">	
 					<div class="col-lg-6 col-sm-12 col-xs-12">
-						<div class="about_content">
-							<h1>A Successful strategy for your business</h1>
-							<p class="content_about">Everything you an imagine in real. We are better then others turn your business to next level</p>
-							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using content here making it look like readable English. Many desktop publishing packages and web page..</p>
-							<a href="#" class="main_btn">Learn More</a>
-						</div>
-					</div><!-- END COL -->					
-					<div class="col-lg-6 col-sm-12 col-xs-12">
-						<div class="about_content_img">
-							<img src="{% static 'main_assets/img/about.png' %}" class="img-fluid" alt="About-Image" />
+						<div class="about_content_video">
+							<video class="img-fluid" autoplay muted loop>
+								<source src="{% static 'main_assets/img/service/aboutvideo.mp4' %}" type="video/mp4">
+								
+							</video>
 						</div>
 					</div><!-- END COL -->				
+					<div class="col-lg-6 col-sm-12 col-xs-12">
+						<div class="about_content">
+							<h1>About Recycl Bandi</h1>
+							<p class="content_about">Promoting Sustainability Through Active Participation</p>
+							<p>Welcome to Recycl Bandi, where sustainability meets action! As champions of environmental stewardship, we're dedicated to educating, collecting, segregating, and delivering recyclable materials to promote a greener future for all. Join us on our journey towards sustainability and discover how you can make a positive impact on the planet. Together, let's build a brighter, cleaner world for generations to come. Explore our website to learn more and get involved today!</p>
+							
+						</div>
+					</div><!-- END COL -->					
+					
+								
 				</div><!-- END ROW -->
 			</div><!-- END CONTAINER -->
 		</section>
@@ -170,60 +166,37 @@
 		<section class="about-skills section-padding">
 			<div class="container">									
 				<div class="row">														
-					<div class="col-lg-6 col-sm-12 col-xs-12">
+					<!-- <div class="col-lg-6 col-sm-12 col-xs-12">
 						<div class="about-skills-img">
-							<img src="{% static 'main_assets/img/skill.png' %}" class="img-fluid" alt="About-Image" />
+							<img src="{% static 'assets/img/skill.png' %}" class="img-fluid" alt="About-Image" />
 						</div>
-					</div><!--- END COL -->		
-					<div class="col-lg-6 col-sm-12 col-xs-12">
+					</div>	 -->
+					<div class="col-lg-12 col-sm-12 col-xs-12">
 						<div class="about-skills-title">
-							<h1>Make your business professional</h1>
-							<p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.</p>
-						</div>
-						<div class="progress-bar-linear">
-							<p class="progress-bar-text">Web Design
-								<span>85%</span>
-							</p>
-							<div class="progress-bar">
-								<span data-percent="85"></span>
+							<h1 class="text-center">From the Founder</h1>
+							<p>As the founder of our organization, I am excited to share with you the journey that led to the creation of our company and the values that guide us every day. Through innovative initiatives, educational programs, and strategic partnerships, we aim to raise awareness about the importance of recycling and provide practical solutions for waste management. By working together with our customers, partners, and communities, we believe that we can create a world where resources are conserved, pollution is reduced, and future generations can thrive.</p>
+						<p>At Recycle Bandi, we are committed to driving positive change and building a more sustainable future for all. Join us on this journey towards environmental stewardship, and together, let's make a difference.</p>
+						
+					</div>
+
+						<div class="row d-flex justify-content-center align-items-center">
+							
+							<img src="{% static 'assets/img/testimonial/img-1.jpg' %}" class="img-fluid  mr-2" style="width:70px;height:70px;border-radius: 50%;" alt="" />
+						
+							<div>
+							<h3 class="title">Dileep Kumar
+									</h3>
+								<span class="post">Founder</span>
 							</div>
-						</div>
-						<div class="progress-bar-linear">
-							<p class="progress-bar-text">Branding
-								<span>70%</span>
-							</p>
-							<div class="progress-bar">
-								<span data-percent="70"></span>
 							</div>
-						</div>	
-						<div class="progress-bar-linear">
-							<p class="progress-bar-text">Mobile App
-								<span>60%</span>
-							</p>
-							<div class="progress-bar">
-								<span data-percent="60"></span>
-							</div>
-						</div>							
+												
 					</div><!--- END COL -->			  
 				</div><!--- END ROW -->
 			</div><!--- END CONTAINER -->
 		</section>
 		<!-- END SKILLS -->		
 		
-		<!-- START VIDEO -->
-		<div class="video_area">
-		   <div class="container">	
-				<div data-stellar-background-ratio="0.3" class="row video_bg text-center">	
-					<div class="offset-lg-2 col-lg-8 col-sm-12 col-xs-12">
-						<div class="video_btn">
-							<h2>we do fastest jobs for your clients. Watch video for know more.</h2>
-							<a class="video-play" href="https://player.vimeo.com/video/414300920"><i class="ti-video-clapper"></i></a>
-						</div>			
-					</div><!-- END COL -->				
-				</div><!-- END ROW -->
-			</div><!-- END CONTAINER -->
-		</div>
-		<!-- END VIDEO -->		
+			
 
 		<!-- START SERVICE -->
 		<section id="services" class="service_area section-padding">
@@ -450,76 +423,81 @@
 		
 		<!-- START TEAM -->
 		<section id="team" class="our_team section-padding">
-		   <div class="container">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<div class="section-title">
-							<h1>Meet Creative team</h1>
-							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-						</div>
-					</div>
-				</div>				
-				<div class="row">					
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="single-team">
-							<div class="img"><img src="{% static 'main_assets/img/team/team1.jpg' %}" class="img-fluid" alt=""></div>
-							<div class="team-content">
-								<h3>Marina Mojo</h3>
-								<p>Developer</p>
-								<ul class="social">
-									<li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div><!-- END COL -->
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="single-team">
-							<div class="img"><img src="{% static 'main_assets/img/team/team2.jpg' %}" class="img-fluid" alt=""></div>
-							<div class="team-content">
-								<h3>Ayoub Fennouni</h3>
-								<p>Logo Expert</p>
-								<ul class="social">
-									<li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div><!-- END COL -->
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="single-team">
-							<div class="img"><img src="{% static 'main_assets/img/team/team3.jpg' %}" class="img-fluid" alt=""></div>
-							<div class="team-content">
-								<h3>Mark Linomi</h3>
-								<p>Marketer</p>
-								<ul class="social">
-									<li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div><!-- END COL -->
-					<div class="col-lg-3 col-sm-6 col-xs-12">
-						<div class="single-team">
-							<div class="img"><img src="{% static 'main_assets/img/team/team4.jpg' %}" class="img-fluid" alt=""></div>
-							<div class="team-content">
-								<h3>Amira Yerden</h3>
-								<p>UI/UX Designer</p>
-								<ul class="social">
-									<li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div><!-- END COL -->				
-				</div><!-- END ROW -->
-			</div><!-- END CONTAINER -->
-		</section>
-		<!-- END TEAM -->
+			<div class="container">
+				 <div class="row">
+					 <div class="col-md-12 text-center">
+						 <div class="section-title">
+							 <h1>Many Thanks To</h1>
+							 <p>Most reports conclude with a page acknowledging the contributions of the people who worked tirelessly on the projects mentioned within. Below, list down the names of those committed to these projects, such as</p>
+						 </div>
+					 </div>
+				 </div>				
+				 <div class="row">					
+					 <div class="col-lg-3 col-sm-6 col-xs-12">
+						 <div class="single-team">
+							 <div class="img"><img src="{% static 'assets/img/team/team1.jpg' %}" class="img-fluid" alt=""></div>
+							 <div class="team-content">
+								 <h3>Marina Mojo</h3>
+								 <p>Developer</p>
+								 <p>Lorem ipsum dolor sit amet</p>
+								 <!-- <ul class="social">
+									 <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+									 <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+									 <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+								 </ul> -->
+							 </div>
+						 </div>
+					 </div><!-- END COL -->
+					 <div class="col-lg-3 col-sm-6 col-xs-12">
+						 <div class="single-team">
+							 <div class="img"><img src="{% static 'assets/img/team/team2.jpg' %}" class="img-fluid" alt=""></div>
+							 <div class="team-content">
+								 <h3>Ayoub Fennouni</h3>
+								 <p>Logo Expert</p>
+								 <p>Lorem ipsum dolor sit amet</p>
+								 <!-- <ul class="social">
+									 <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+									 <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+									 <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+								 </ul> -->
+							 </div>
+						 </div>
+					 </div><!-- END COL -->
+					 <div class="col-lg-3 col-sm-6 col-xs-12">
+						 <div class="single-team">
+							 <div class="img"><img src="{% static 'assets/img/team/team3.jpg' %}" class="img-fluid" alt=""></div>
+							 <div class="team-content">
+								 <h3>Mark Linomi</h3>
+								 <p>Marketer</p>
+								 <p>Lorem ipsum dolor sit amet,</p>
+								 <!-- <ul class="social">
+									 <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+									 <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+									 <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+								 </ul> -->
+							 </div>
+						 </div>
+					 </div><!-- END COL -->
+					 <div class="col-lg-3 col-sm-6 col-xs-12">
+						 <div class="single-team">
+							 <div class="img"><img src="{% static 'assets/img/team/team4.jpg' %}" class="img-fluid" alt=""></div>
+							 <div class="team-content">
+								 <h3>Amira Yerden</h3>
+								 <p>UI/UX Designer</p>
+								 <P>Lorem ipsum dolor sit amet</P>
+								 <!-- <ul class="social">
+									 <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+									 <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+									 <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+								 </ul> -->
+							 </div>
+						 </div>
+					 </div><!-- END COL -->				
+				 </div><!-- END ROW -->
+			 </div><!-- END CONTAINER -->
+		 </section>
+		 <!-- END TEAM -->
+ 
 
 		<!-- START PRICING -->
 		<section id="pricing" class="pricing_table section-padding">
@@ -584,7 +562,7 @@
 		<section class="testimonial-demo section-padding">
 			<div class="container">			
 				<div class="section-title text-center">
-					<h1>Read Testimonials</h1>
+					<h1>Our Cilents Feedback</h1>
 					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
 				</div>					
 				<div class="row">					
@@ -800,12 +778,12 @@
 		<!-- END COMPANY PARTNER LOGO -->
 
 		<!-- START FOOTER -->
-		<div class="footer" style="">
+		<div class="footer" style="background-image: url(../../static/assets/img/bg/footer.png);  background-size:cover;">
 			<div class="container">		
 				<div class="row">						
 					<div class="col-lg-3 col-sm-6 col-xs-12">
 						<div class="footer_logo">
-							<img src="{% static 'main_assets/img/logo.png' %}" alt="" />
+							<img src="{%static 'main_assets/img/recycle.png' %}" style="width:2opx!important;height:80px;" alt="" />
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis dignissim.</p>
 						</div>
 						<div class="social_profile">
@@ -819,13 +797,13 @@
 					</div><!--- END COL -->						
 					<div class="col-lg-3 col-sm-6 col-xs-12">
 						<div class="single_footer single_footer_top_one">
-							<h4>Frequently Asked Questions</h4>
+							<h4>Quick Links</h4>
 							<ul>
-								<li><a href="#">Privacy & Securty</a></li>
-								<li><a href="#">Terms of Service</a></li>
-								<li><a href="#">Communications</a></li>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Services</a></li>
 								<li><a href="#">Referral Terms</a></li>
-								<li><a href="#">Disclaimers</a></li>
+								<li><a href="#">Contact</a></li>
 							</ul>
 						</div>
 					</div><!--- END COL -->	
@@ -833,9 +811,9 @@
 						<div class="single_footer single_footer_top">
 							<h4>Company</h4>
 							<ul>
-								<li><a href="#">Licenses</a></li>
-								<li><a href="#">market API</a></li>
-								<li><a href="#">Careers and job</a></li>
+								<li><a href="#">Privacy and Policy</a></li>
+								<li><a href="#">Terms and Conditions</a></li>
+								<li><a href="#">Refund Policy</a></li>
 								<li><a href="#">Emplois en France</a></li>
 								<li><a href="#">Jobs in Deutschland	</a></li>						
 							</ul>
@@ -854,7 +832,7 @@
 				<div class="row">
 					<div class="col-lg-12 text-center">
 						<div class="footer_copyright">
-							<p>&copy; 2024 Recycle Bandi. All Rights Reserved.</p>
+							<p>&copy; 2024 Recyclebandi All Rights Reserved.</p>
 						</div>
 					</div>
 				</div>				
