@@ -2017,7 +2017,7 @@ font-weight: 600;
 
 
 .home_bg{
-	background-image: url(../img/bg/topbanner.png);
+	background-image: url(../img/bg/topbanner.png) !important;
 	background-size:cover; 
 	background-position: center center;
 
