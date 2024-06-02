@@ -35,8 +35,9 @@ class UserManager(BaseUserManager):
 
 user_roles = (
         ('admin', 'admin'),
+        ('employee','employee'),
         ('cluster', 'cluster'),
-        ('customer','customer'),
+       
     )
 
     
@@ -54,6 +55,8 @@ class Users(AbstractBaseUser, PermissionsMixin):
     address = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    otp = models.IntegerField(blank=True, null=True)
+    otp_timestamp = models.DateTimeField(default=None,blank=True, null=True)
 
     # Required for custom user model
     is_active = models.BooleanField(default=True)
@@ -78,22 +81,28 @@ class Users(AbstractBaseUser, PermissionsMixin):
     def has_module_perms(self, app_label):
          return True
 
-
+shop_type = (
+        ('panshop', 'pan shop'),
+        ('teashop', 'tea shop'),
+        ('hosptial','hosptial'),
+        ('restrant','restrant'),
+    )
 class ShopOwner(models.Model):
     shopowner_number = models.CharField(max_length=255,unique=True,default='')
     user = models.ForeignKey('Users', models.DO_NOTHING, null=False,blank=False,related_name='created_user',db_column='users_id')
     shop_name = models.CharField(max_length=255)
+    shop_type = models.CharField(choices=shop_type,max_length=100,null=True,blank=True,default='')
     area = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
     state = models.CharField(max_length=255)
-    points = models.DecimalField(max_digits=10, decimal_places=2)
+    points = models.DecimalField(max_digits=10, decimal_places=2,default='0')
     rcb_agreed = models.BooleanField(default=True)
     created_by = models.ForeignKey('Users', models.DO_NOTHING, null=False,blank=False,related_name='created_owner',db_column='created_by')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name} - {self.shop_name}"
+        return f"{self.shopowner_number} {self.shop_name}"
     class Meta:
         managed = True
         db_table = 'owner_details'

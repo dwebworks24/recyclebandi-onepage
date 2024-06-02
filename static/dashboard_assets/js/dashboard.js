@@ -209,3 +209,113 @@ $(function () {
   };
   new ApexCharts(document.querySelector("#earning"), earning).render();
 })
+
+
+
+
+var counter = 1;
+function addProductField() {
+  var waste_obj = $('#waste_obj').val()
+  var waste_list = JSON.parse(waste_obj);
+  var container = document.getElementById("dynamicFieldsContainer");
+  var newRow = document.createElement("div");
+  newRow.className = "row mt-3";
+  newRow.id = "row_" + counter;
+  var materialId = "wast_id_" + counter;
+  var materialPrice = "price_" + counter;
+  var materialPercentage = "quantity_" + counter;
+
+  newRow.innerHTML = `
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <label for="${materialId}" class="form-label">Waste Type</label>
+      <select class="form-select" id="${materialId}" name="wast_id" aria-label="Waste type select">
+        <option selected>Open this select menu</option>
+    
+      </select>
+    </div>
+    <div class="col-sm-12 col-md-3 col-lg-3">
+        <label for="${materialPrice}" class="form-label">Price</label>
+      <input type="text" class="form-control" id="${materialPrice}" name="price_1" placeholder="Please enter price" aria-label="price">
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <label for="${materialPercentage}" class="form-label">Quantity</label>
+      <input type="text" class="form-control" id="${materialPercentage}" name="quantity" placeholder="Please enter quantity" aria-label="Quantity">
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3 my-auto">
+      <button type="button" class="btn btn-primary mt-5 add-row-btn" onclick="addProductField()">+ADD</button>
+      <button type="button" class="btn btn-danger mt-5" onclick="removeProductField('row_${counter}')">-REMOVE</button>
+      </div>
+  `;
+
+  container.appendChild(newRow);
+  var selectElement = document.getElementById(materialId);
+  waste_list.forEach(function(material) {
+      var option = document.createElement("option");
+      option.text = material.fields.wastename;
+      option.value = material.pk;
+      selectElement.appendChild(option);
+  });
+
+
+  $(document).ready(function() {
+    $('#materialId').select2({
+        placeholder: "Select Material",
+        theme: "bootstrap5",
+        width: "100%" 
+    });
+});
+
+ 
+  counter++;
+}
+
+
+function removeProductField(rowId) {
+  var row = document.getElementById(rowId);
+  row.parentNode.removeChild(row);
+}
+
+
+
+// add shop owner
+
+function saveshopowner(){
+  const first_name = $("#first_name").val();
+  const last_name = $("#last_name").val();
+  const email = $("#email").val();
+  const phone = $("#phone").val();
+  const shop_name = $("#shop_name").val();
+  const shopType = $('#shop_type').val();
+  const area = $("#area").val();
+  const city = $("#city").val();
+  const state = $("#state").val();
+  const zip_code = $("#zip_code").val();
+  const rcbAgreement = $('input[name="rcb_agreement"]:checked').val();
+ 
+
+    $.ajax({
+      url: '/save_shop/',
+      method: 'POST',
+      data: {
+        'first_name':first_name,
+        'last_name':last_name,
+        'email':email,
+        'phone':phone,
+        'shop_name':shop_name,
+        'shopType':shopType,
+        'area':area,
+        'city':city,
+        'state':state,
+        'zip_code':zip_code,
+        'rcbAgreement':rcbAgreement,
+      },
+      success: function(response){
+        x = response
+        show_success(response['message'])
+        window.location = response['path']
+      },
+      error: function(response){
+        show_error(response.responseJSON['error'])
+      }
+    })
+}

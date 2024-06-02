@@ -5,8 +5,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Modernize Free</title>
-  <link rel="shortcut icon" type="image/png" href="{% static 'dashboard_assets/images/logos/favicon.png' %}" />
+  <title>Recycle Bandi | Dashboard</title>
+  <link rel="shortcut icon" type="image/png" href="{% static 'dashboard_assets/images/logos/logo.png' %}" />
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="{% static 'dashboard_assets/css/styles.min.css' %}" />
   
@@ -20,9 +20,9 @@
     <aside class="left-sidebar">
       <!-- Sidebar scroll-->
       <div>
-        <div class="brand-logo d-flex align-items-center justify-content-between">
+        <div class="brand-logo d-flex align-items-center justify-content-center">
           <a href="./index.html" class="text-nowrap logo-img">
-            <img src="{% static 'dashboard_assets/images/logos/dark-logo.svg' %}" width="180" alt="" />
+            <img src="{% static 'dashboard_assets/images/logos/logo.png' %}" width="100" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
             <i class="ti ti-x fs-8"></i>
@@ -35,30 +35,52 @@
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
               <span class="hide-menu">Home</span>
             </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="/dashboard/" aria-expanded="false">
-                <span>
-                  <i class="ti ti-layout-dashboard"></i>
-                </span>
-                <span class="hide-menu">Dashboard</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="/add_transaction/" aria-expanded="false">
-                <span>
-                  <i class="ti ti-file-description"></i>
-                </span>
-                <span class="hide-menu">Add Transaction</span>
-              </a>
-            </li>
+            {% if user.is_authenticated  %}
+              {% if user.role == "employee" %}
               <li class="sidebar-item">
-                <a class="sidebar-link" href="/add_shop/" aria-expanded="false">
+                <a class="sidebar-link" href="/dashboard/" aria-expanded="false">
                   <span>
-                    <i class="ti ti-article"></i>
+                    <i class="ti ti-layout-dashboard"></i>
                   </span>
-                  <span class="hide-menu">Add Shop Owner</span>
+                  <span class="hide-menu">Dashboard</span>
                 </a>
               </li>
+            
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="/add_transaction/" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-file-description"></i>
+                  </span>
+                  <span class="hide-menu">Add Transaction</span>
+                </a>
+              </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="/add_shop/" aria-expanded="false">
+                    <span>
+                      <i class="ti ti-article"></i>
+                    </span>
+                    <span class="hide-menu">Add Shop Owner</span>
+                  </a>
+                </li>
+                {% elif user.role == "cluster" %}
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="/dashboard/" aria-expanded="false">
+                    <span>
+                      <i class="ti ti-file-description"></i>
+                    </span>
+                    <span class="hide-menu">Transaction History</span>
+                  </a>
+                </li>
+                  <li class="sidebar-item">
+                    <a class="sidebar-link" href="/cluster_dashboard/" aria-expanded="false">
+                      <span>
+                        <i class="ti ti-article"></i>
+                      </span>
+                      <span class="hide-menu">Show Points</span>
+                    </a>
+                  </li>
+                {% endif %}
+              {% endif %}
               <!-- <li class="sidebar-item">
                 <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
                   <span>
@@ -165,6 +187,7 @@
   <script src="{% static 'dashboard_assets/libs/simplebar/dist/simplebar.js' %}"></script>
   <script src="{% static 'dashboard_assets/js/dashboard.js' %}"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     $(document).ready(function() {
       // Initialize Select2 on the select element
@@ -176,6 +199,39 @@
       $('#waste_type_select2').select2();
     });
   </script>
+  <script>
+    function show_success(message,classType='success'){
+        Swal.fire({text: message,icon: classType});
+      }
+  
+      function show_error(message){
+        Swal.fire({text: message,icon: "error"});
+      }
+  
+      function show_msg_callback(message,classType='success',callback){
+        Swal.fire({text: message,icon: classType}).then((result) => callback());
+      }
+  
+      function confirm_dialog(title,message,callback,cancelText='No',confirmText='Yes',buttonTitle=null){
+        Swal.fire({
+          title: title,
+          text: message,
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          cancelButtonText: cancelText,
+          confirmButtonText: confirmText,
+          reverseButtons: true
+        }).then((result) => {
+          if (result.isConfirmed) {
+            callback(buttonTitle)
+          }
+        });
+      }
+</script>
+
+
 </body>
 
 </html>

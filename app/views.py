@@ -6,6 +6,7 @@ from django.http import JsonResponse,HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .models import *
+from django.core.serializers import serialize
 # Create your views here.
 
 def home(request):
@@ -33,9 +34,13 @@ def hometwo(request):
         return HttpResponse(html_template.render(context, request))
     
 
+@login_required
 def dashboard(request):
     context ={}
     try:
+        context['users'] = Users.objects.filter(id=request.user.id).first()
+        context['transaction'] = PickupTransaction.objects.filter(created_by= request.user.id,shop_owner__user__role='cluster')
+
         return render(request, 'uifiles/dashboard.html',context)
     
     except template.TemplateDoesNotExist:
@@ -45,11 +50,28 @@ def dashboard(request):
         html_template = loader.get_template('uifiles/page-500.html')
         return HttpResponse(html_template.render(context, request))
 
+@login_required
+def clusterdashboard(request):
+    context ={}
+    try:
+        context['transactionwaste'] = PickupWastData.objects.filter(pickup_transaction__shop_owner__user__id=request.user.id)
+        return render(request, 'uifiles/cluster_dashboard.html',context)
+    
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('uifiles/page-404.html')
+        return HttpResponse(html_template.render(context, request))
+    except:
+        html_template = loader.get_template('uifiles/page-500.html')
+        return HttpResponse(html_template.render(context, request))
+
+
+
 def cluster_form(request):
     context ={}
     try:
         context['owners'] = ShopOwner.objects.all()
         context['waste'] = WasteType.objects.all()
+        context['waste_obj_json'] = serialize('json', context['waste'])
         return render(request, 'uifiles/add_cluster_transcration.html',context)
     
     except template.TemplateDoesNotExist:
@@ -88,12 +110,12 @@ def login_logic(request):
                         print('admin')
                         return JsonResponse({'redirect_url': '/admin/'})
                     
-                    elif user.role == "cluster":
-                        print("cluster")
+                    elif user.role == "employee":
+                        print("employee")
                         return JsonResponse({'redirect_url': '/dashboard/'})
                     else:
-                        print("customer")
-                        return JsonResponse({'redirect_url': '/customer_view/'})
+                        print("cluster")
+                        return JsonResponse({'redirect_url': '/cluster_dashboard/'})
             else:
                 msg = 'Invalid credentials'
         
@@ -107,9 +129,34 @@ def login_logic(request):
 
 @login_required
 def logout_view(request):
+    context ={}
     try:
         logout(request)
         return redirect('/')
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('uifiles/page-404.html')
+        return HttpResponse(html_template.render(request))
+    except:
+        html_template = loader.get_template('uifiles/page-500.html')
+        return HttpResponse(html_template.render(request))
+    
+def mobial_otp_view(request):
+    context ={}
+    try:
+       return render(request, 'uifiles/mobial_login.html',context)
+    
+    except template.TemplateDoesNotExist:
+        html_template = loader.get_template('uifiles/page-404.html')
+        return HttpResponse(html_template.render(request))
+    except:
+        html_template = loader.get_template('uifiles/page-500.html')
+        return HttpResponse(html_template.render(request))
+    
+def verified_otp_view(request):
+    context ={}
+    try:
+       return render(request, 'uifiles/otp_verification.html',context)
+    
     except template.TemplateDoesNotExist:
         html_template = loader.get_template('uifiles/page-404.html')
         return HttpResponse(html_template.render(request))

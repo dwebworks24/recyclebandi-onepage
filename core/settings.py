@@ -140,3 +140,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+FAST2SMS_API_KEY='LOZC9VFJiSaMe2DGE4uzkXngTqv07d1xwjh5BW3Uo86RysAtQNIw4OVfF57D6rySmh12sRLqYWdcl0ni'
