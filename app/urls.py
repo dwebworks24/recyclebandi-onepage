@@ -5,7 +5,6 @@ from .controler_logic import *
 
 urlpatterns = [
     path('', home, name='home'),
-    path('hometwo/', hometwo, name='hometwo'),
     path('dashboard/', dashboard, name='dashboard'),
     path('cluster_dashboard/', clusterdashboard, name='cluster_dashboard'),
     path('add_transaction/', cluster_form, name='add_transaction'),

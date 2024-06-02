@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,31 +15,31 @@
 		<!-- SITE TITLE -->
 		<title>Minton - One Page Parallax Template</title>			
 		<!-- Latest Bootstrap min CSS -->
-		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">		
+		<link rel="stylesheet" href="{% static 'main_assets/bootstrap/css/bootstrap.min.css' %}">		
 		<!-- Google Font -->
 		<link rel="preconnect" href="https://fonts.gstatic.com/">
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"> 	
 		<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&amp;display=swap&amp;subset=latin-ext" rel="stylesheet"> 			
 		<!-- Font Awesome CSS -->
-		<link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/fonts/themify-icons.css">
+		<link rel="stylesheet" href="{% static 'main_assets/fonts/font-awesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'main_assets/fonts/themify-icons.css' %}">
 		<!--- owl carousel Css-->
-		<link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.css">
-		<link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.css">
+		<link rel="stylesheet" href="{% static 'main_assets/owlcarousel/css/owl.carousel.css' %}">
+		<link rel="stylesheet" href="{% static 'main_assets/owlcarousel/css/owl.theme.css' %}">
 		<!--slicknav Css-->
-        <link rel="stylesheet" href="assets/css/slicknav.css">		
+        <link rel="stylesheet" href="{% static 'main_assets/css/slicknav.css' %}">		
 		<!-- Venobox CSS -->
-		<link rel="stylesheet" href="assets/css/venobox.css">			
+		<link rel="stylesheet" href="{% static 'main_assets/css/venobox.css' %}">			
 		<!-- MAGNIFIC CSS -->
-		<link rel="stylesheet" href="assets/css/magnific-popup.css">					
+		<link rel="stylesheet" href="{% static 'main_assets/css/magnific-popup.css' %}">					
 		<!-- Style CSS -->		
-		<link rel="stylesheet" href="assets/css/portfolio.css">			
-		<link rel="stylesheet" href="assets/css/style.css">			
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<link rel="stylesheet" href="{% static 'main_assets/css/portfolio.css' %}">			
+		<link rel="stylesheet" href="{% static 'main_assets/css/style.css' %}">			
+		<!-- HTML5 shim and Respond.js' %} IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js' %} doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js' %}"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js' %}"></script>
 		<![endif]-->
 	</head>
 	
@@ -59,10 +60,11 @@
 				<div class="row menu_bg">
 					<div class="col-lg-2 col-md-3 col-sm-4">
 						<div class="site-logo">
-							<a class="navbar-logo" href="index.html"><img src="assets/img/logo.png" alt=""></a>
+							<a class="navbar-logo" href="index.html"><img src="{% static 'main_assets/img/logo.png' %}" alt=""></a>
 						</div>
-					</div><!--- END Col -->					
-					<div class="col-lg-10 col-md-9 col-sm-8">
+					</div>
+					<!--- END Col -->					
+					<div class="col-lg-8 col-md-9 col-sm-8">
 						<div class="header_right">
 							<nav id="main-menu" class="ml-auto">
 								<ul>
@@ -77,14 +79,21 @@
 							</nav>
 							<div id="mobile_menu"></div>
 						</div>
-					</div><!--- END COL -->					
+					</div>
+					<!--- END COL -->
+					<div class="col-lg-2 col-md-3 col-sm-4 m-auto">
+						<div class="site-logo mt-2">
+							<a class="navbar-logo login-icon" href="/login/"><i class="fa fa-user text-light " title="Facebook"></i></a>
+						</div>
+					</div>	
+									
 				</div><!--- END ROW -->
 			</div><!--- END CONTAINER -->
 		</div> 	  
 		<!-- END NAVBAR -->
 
 		<!-- START HOME -->
-		<section data-stellar-background-ratio="0.3" id="home" class="home_bg" style="background-image: url(assets/img/bg/parallax-bg.jpg);  background-size:cover; background-position: center center;">
+		<section data-stellar-background-ratio="0.3" id="home" class="home_bg" style="background-image: url({% static 'main_assets/img/bg/parallax-bg.jpg' %});  background-size:cover; background-position: center center;">
 			<div class="container">
 				<div class="row">
 				  <div class="col-lg-12 col-sm-12 col-xs-12 text-center">
@@ -100,7 +109,7 @@
 		<!-- END  HOME -->		
 
 		<!-- START ABOUT -->
-		<section data-stellar-background-ratio="0.3" id="about" class="about_us section-padding" style="background-image: url(assets/img/bg/about-bg.png);  background-size:cover; background-position: center center;">
+		<section data-stellar-background-ratio="0.3" id="about" class="about_us section-padding">
 		   <div class="container">
 				<div class="col-md-12 text-center">
 					<div class="section-title">
@@ -149,7 +158,7 @@
 					</div><!-- END COL -->					
 					<div class="col-lg-6 col-sm-12 col-xs-12">
 						<div class="about_content_img">
-							<img src="assets/img/about.png" class="img-fluid" alt="About-Image" />
+							<img src="{% static 'main_assets/img/about.png' %}" class="img-fluid" alt="About-Image" />
 						</div>
 					</div><!-- END COL -->				
 				</div><!-- END ROW -->
@@ -163,7 +172,7 @@
 				<div class="row">														
 					<div class="col-lg-6 col-sm-12 col-xs-12">
 						<div class="about-skills-img">
-							<img src="assets/img/skill.png" class="img-fluid" alt="About-Image" />
+							<img src="{% static 'main_assets/img/skill.png' %}" class="img-fluid" alt="About-Image" />
 						</div>
 					</div><!--- END COL -->		
 					<div class="col-lg-6 col-sm-12 col-xs-12">
@@ -230,42 +239,42 @@
 				<div class="row text-center">					
 					<div class="col-lg-4 col-sm-6 col-xs-12">
 						<div class="single_service">
-							<img src="assets/img/service/1.png" alt="service-image" />
+							<img src="{% static 'main_assets/img/service/1.png' %}" alt="service-image" />
 							<h4>Web Design</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin pharetra tortor.</p>
 						</div>
 					</div><!-- END COL -->					
 					<div class="col-lg-4 col-sm-6 col-xs-12">
 						<div class="single_service">
-							<img src="assets/img/service/2.png" alt="service-image" />
+							<img src="{% static 'main_assets/img/service/2.png' %}" alt="service-image" />
 							<h4>Development</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin pharetra tortor.</p>
 						</div>
 					</div><!-- END COL -->					
 					<div class="col-lg-4 col-sm-6 col-xs-12">
 						<div class="single_service">
-							<img src="assets/img/service/3.png" alt="service-image" />
+							<img src="{% static 'main_assets/img/service/3.png' %}" alt="service-image" />
 							<h4>Graphics Design</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin pharetra tortor.</p>
 						</div>
 					</div><!-- END COL -->					
 					<div class="col-lg-4 col-sm-6 col-xs-12">
 						<div class="single_service">
-							<img src="assets/img/service/2.png" alt="service-image" />
+							<img src="{% static 'main_assets/img/service/2.png' %}" alt="service-image" />
 							<h4>Branding</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin pharetra tortor.</p>
 						</div>
 					</div><!-- END COL -->					
 					<div class="col-lg-4 col-sm-6 col-xs-12">
 						<div class="single_service">
-							<img src="assets/img/service/3.png" alt="service-image" />
+							<img src="{% static 'main_assets/img/service/3.png' %}" alt="service-image" />
 							<h4>Marketing</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin pharetra tortor.</p>
 						</div>
 					</div><!-- END COL -->					
 					<div class="col-lg-4 col-sm-6 col-xs-12">
 						<div class="single_service">
-							<img src="assets/img/service/1.png" alt="service-image" />
+							<img src="{% static 'main_assets/img/service/1.png' %}" alt="service-image" />
 							<h4>Business Analysis</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sollicitudin pharetra tortor.</p>
 						</div>
@@ -373,61 +382,61 @@
 				<div class="row portfolio_item">					
 					<div class="col-xs-12 col-sm-6 col-lg-4 mix webtemplate seo">		
 						<div class="box">
-							<img src="assets/img/portfolio/1.jpg" alt="">
+							<img src="{% static 'main_assets/img/portfolio/1.jpg' %}" alt="">
 							<div class="box-content">
 								<h3 class="title"><a href="single-project.html" target="_blank">App Landing</a></h3>
 								<span class="port-cat">Branding , Design</span>								
-								<a href="assets/img/portfolio/1.jpg" class="port-icon lightbox" data-gall="gall-work"><i class="ti-plus"></i></a>
+								<a href="{% static 'main_assets/img/portfolio/1.jpg' %}" class="port-icon lightbox" data-gall="gall-work"><i class="ti-plus"></i></a>
 							</div>							
 						</div>
 					</div><!--- END COL -->	
 					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mix branding">				
 						<div class="box">
-							<img src="assets/img/portfolio/2.jpg" alt="">
+							<img src="{% static 'main_assets/img/portfolio/2.jpg' %}" alt="">
 							<div class="box-content">
 								<h3 class="title"><a href="single-project.html" target="_blank">Medical Concept</a></h3>
 								<span class="port-cat">Design , Development</span>								
-								<a href="assets/img/portfolio/2.jpg" class="port-icon lightbox" data-gall="gall-work"><i class="ti-plus"></i></a>	
+								<a href="{% static 'main_assets/img/portfolio/2.jpg' %}" class="port-icon lightbox" data-gall="gall-work"><i class="ti-plus"></i></a>	
 							</div>
 						</div>
 					</div><!--- END COL -->
 					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mix webtemplate digital">						
 						<div class="box">
-							<img src="assets/img/portfolio/3.jpg" alt="">
+							<img src="{% static 'main_assets/img/portfolio/3.jpg' %}" alt="">
 							<div class="box-content">
 								<h3 class="title"><a href="single-project.html" target="_blank">Increase Sale</a></h3>
 								<span class="port-cat">Marketing</span>								
-								<a href="assets/img/portfolio/3.jpg" class="port-icon lightbox" data-gall="gall-work"><i class="ti-plus"></i></a>							
+								<a href="{% static 'main_assets/img/portfolio/3.jpg' %}" class="port-icon lightbox" data-gall="gall-work"><i class="ti-plus"></i></a>							
 							</div>				
 						</div>
 					</div><!--- END COL -->
 					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mix digital seo">						
 						<div class="box">
-							<img src="assets/img/portfolio/4.jpg" alt="">
+							<img src="{% static 'main_assets/img/portfolio/4.jpg' %}" alt="">
 							<div class="box-content">
 								<h3 class="title"><a href="single-project.html" target="_blank">Marketing Page</a></h3>
 								<span class="port-cat">Marketing</span>								
-								<a href="assets/img/portfolio/4.jpg" class="port-icon lightbox" data-gall="gall-work"><i class="ti-plus"></i></a>							
+								<a href="{% static 'main_assets/img/portfolio/4.jpg' %}" class="port-icon lightbox" data-gall="gall-work"><i class="ti-plus"></i></a>							
 							</div>	
 						</div>
 					</div><!--- END COL -->
 					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mix branding digital">						
 						<div class="box">
-							<img src="assets/img/portfolio/5.jpg" alt="">								
+							<img src="{% static 'main_assets/img/portfolio/5.jpg' %}" alt="">								
 							<div class="box-content">
 								<h3 class="title"><a href="single-project.html" target="_blank">Restaurant Design</a></h3>
 								<span class="port-cat">Product</span>								
-								<a href="assets/img/portfolio/5.jpg" class="port-icon lightbox" data-gall="gall-work"><i class="ti-plus"></i></a>							
+								<a href="{% static 'main_assets/img/portfolio/5.jpg' %}" class="port-icon lightbox" data-gall="gall-work"><i class="ti-plus"></i></a>							
 							</div>								
 						</div>
 					</div><!--- END COL -->	
 					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mix webtemplate seo">				
 						<div class="box">
-							<img src="assets/img/portfolio/6.jpg" alt="">	
+							<img src="{% static 'main_assets/img/portfolio/6.jpg' %}" alt="">	
 							<div class="box-content">
 								<h3 class="title"><a href="single-project.html" target="_blank">App Concept</a></h3>
 								<span class="port-cat">Product</span>								
-								<a href="assets/img/portfolio/6.jpg" class="port-icon lightbox" data-gall="gall-work"><i class="ti-plus"></i></a>							
+								<a href="{% static 'main_assets/img/portfolio/6.jpg' %}" class="port-icon lightbox" data-gall="gall-work"><i class="ti-plus"></i></a>							
 							</div>	
 						</div>
 					</div><!--- END COL -->	
@@ -453,7 +462,7 @@
 				<div class="row">					
 					<div class="col-lg-3 col-sm-6 col-xs-12">
 						<div class="single-team">
-							<div class="img"><img src="assets/img/team/team1.jpg" class="img-fluid" alt=""></div>
+							<div class="img"><img src="{% static 'main_assets/img/team/team1.jpg' %}" class="img-fluid" alt=""></div>
 							<div class="team-content">
 								<h3>Marina Mojo</h3>
 								<p>Developer</p>
@@ -467,7 +476,7 @@
 					</div><!-- END COL -->
 					<div class="col-lg-3 col-sm-6 col-xs-12">
 						<div class="single-team">
-							<div class="img"><img src="assets/img/team/team2.jpg" class="img-fluid" alt=""></div>
+							<div class="img"><img src="{% static 'main_assets/img/team/team2.jpg' %}" class="img-fluid" alt=""></div>
 							<div class="team-content">
 								<h3>Ayoub Fennouni</h3>
 								<p>Logo Expert</p>
@@ -481,7 +490,7 @@
 					</div><!-- END COL -->
 					<div class="col-lg-3 col-sm-6 col-xs-12">
 						<div class="single-team">
-							<div class="img"><img src="assets/img/team/team3.jpg" class="img-fluid" alt=""></div>
+							<div class="img"><img src="{% static 'main_assets/img/team/team3.jpg' %}" class="img-fluid" alt=""></div>
 							<div class="team-content">
 								<h3>Mark Linomi</h3>
 								<p>Marketer</p>
@@ -495,7 +504,7 @@
 					</div><!-- END COL -->
 					<div class="col-lg-3 col-sm-6 col-xs-12">
 						<div class="single-team">
-							<div class="img"><img src="assets/img/team/team4.jpg" class="img-fluid" alt=""></div>
+							<div class="img"><img src="{% static 'main_assets/img/team/team4.jpg' %}" class="img-fluid" alt=""></div>
 							<div class="team-content">
 								<h3>Amira Yerden</h3>
 								<p>UI/UX Designer</p>
@@ -530,7 +539,7 @@
 								<div class="single-pricing">
 									<div class="price-head">								
 										<h2>Yearly Access</h2>
-										<img src="assets/img/price-one.png" alt="image" />
+										<img src="{% static 'main_assets/img/price-one.png' %}" alt="image" />
 									</div>
 									<h1 class="price"><sup>$</sup>129</h1>
 									<ul>
@@ -549,7 +558,7 @@
 								<div class="single-pricing package-lifetime">
 									<div class="price-head">								
 										<h2>Lifetime Access</h2>
-										<img src="assets/img/price-two.png" alt="image" />
+										<img src="{% static 'main_assets/img/price-two.png' %}" alt="image" />
 									</div>
 									<h1 class="price"><sup>$</sup>349</h1>
 									<ul>
@@ -587,7 +596,7 @@
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum dolor sit amet eros imperdiet, sit amet hendrerit nisi vehicula.
 									</p>
 								</div>
-								<img src="assets/img/testimonial/img-1.jpg" class="img-fluid" alt="" />
+								<img src="{% static 'main_assets/img/testimonial/img-1.jpg' %}" class="img-fluid" alt="" />
 								<h3 class="title">James Simmons</h3>
 								<span class="post">Python Developer</span>
 							</div>
@@ -598,7 +607,7 @@
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum dolor sit amet eros imperdiet, sit amet hendrerit nisi vehicula.
 									</p>
 								</div>
-								<img src="assets/img/testimonial/img-2.jpg" class="img-fluid" alt="" />
+								<img src="{% static 'main_assets/img/testimonial/img-2.jpg' %}" class="img-fluid" alt="" />
 								<h3 class="title">Thompson Luis</h3>
 								<span class="post">Web Developer</span>
 							</div>
@@ -609,7 +618,7 @@
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum dolor sit amet eros imperdiet, sit amet hendrerit nisi vehicula.
 									</p>
 								</div>
-								<img src="assets/img/testimonial/img-3.jpg" class="img-fluid" alt="" />
+								<img src="{% static 'main_assets/img/testimonial/img-3.jpg' %}" class="img-fluid" alt="" />
 								<h3 class="title">Martha Valdes</h3>
 								<span class="post">Marketing Manager</span>
 							</div>
@@ -619,7 +628,7 @@
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum dolor sit amet eros imperdiet, sit amet hendrerit nisi vehicula.
 									</p>
 								</div>
-								<img src="assets/img/testimonial/img-4.jpg" class="img-fluid" alt="" />
+								<img src="{% static 'main_assets/img/testimonial/img-4.jpg' %}" class="img-fluid" alt="" />
 								<h3 class="title">Cameron Decosa</h3>
 								<span class="post">React Developer</span>
 							</div>
@@ -629,7 +638,7 @@
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum dolor sit amet eros imperdiet, sit amet hendrerit nisi vehicula.
 									</p>
 								</div>
-								<img src="assets/img/testimonial/img-1.jpg" class="img-fluid" alt="" />
+								<img src="{% static 'main_assets/img/testimonial/img-1.jpg' %}" class="img-fluid" alt="" />
 								<h3 class="title">Gilber Jhonson</h3>
 								<span class="post">PHP Developer</span>
 							</div>
@@ -639,7 +648,7 @@
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum dolor sit amet eros imperdiet, sit amet hendrerit nisi vehicula.
 									</p>
 								</div>
-								<img src="assets/img/testimonial/img-2.jpg" class="img-fluid" alt="" />
+								<img src="{% static 'main_assets/img/testimonial/img-2.jpg' %}" class="img-fluid" alt="" />
 								<h3 class="title">Barly Miller</h3>
 								<span class="post">Web Developer</span>
 							</div>
@@ -661,7 +670,7 @@
 					<div class="col-lg-4 col-sm-6 col-xs-12">
 						<div class="single_blog">
 							<div class="blog-img">
-								<img src="assets/img/blog/1.jpg" class="img-fluid" alt="image" />
+								<img src="{% static 'main_assets/img/blog/1.jpg' %}" class="img-fluid" alt="image" />
 								<a href="blog.html">Development</a>
 							</div>
 							<span>Jan 01, 2021</span>
@@ -673,7 +682,7 @@
 					<div class="col-lg-4 col-sm-6 col-xs-12">
 						<div class="single_blog">
 							<div class="blog-img">
-								<img src="assets/img/blog/2.jpg" class="img-fluid" alt="image" />
+								<img src="{% static 'main_assets/img/blog/2.jpg' %}" class="img-fluid" alt="image" />
 								<a href="blog.html" target="_blank">Design</a>
 							</div>
 							<span>Jan 02, 2021</span>
@@ -685,7 +694,7 @@
 					<div class="col-lg-4 col-sm-6 col-xs-12">
 						<div class="single_blog">
 							<div class="blog-img">
-								<img src="assets/img/blog/3.jpg" class="img-fluid" alt="image" />
+								<img src="{% static 'main_assets/img/blog/3.jpg' %}" class="img-fluid" alt="image" />
 								<a href="blog.html" target="_blank">Marketing</a>
 							</div>
 							<span>Jan 03, 2021</span>
@@ -774,15 +783,15 @@
 				<div class="row">
 					<div class="col-lg-12 text-center">
 						<div class="partner">
-							<a href="#"><img src="assets/img/partner/brand-1.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/brand-2.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/brand-3.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/brand-4.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/brand-5.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/brand-2.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/brand-1.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/brand-4.png" alt="image"></a>
-							<a href="#"><img src="assets/img/partner/brand-3.png" alt="image"></a>
+							<a href="#"><img src="{% static 'main_assets/img/partner/brand-1.png' %}" alt="image"></a>
+							<a href="#"><img src="{% static 'main_assets/img/partner/brand-2.png' %}" alt="image"></a>
+							<a href="#"><img src="{% static 'main_assets/img/partner/brand-3.png' %}" alt="image"></a>
+							<a href="#"><img src="{% static 'main_assets/img/partner/brand-4.png' %}" alt="image"></a>
+							<a href="#"><img src="{% static 'main_assets/img/partner/brand-5.png' %}" alt="image"></a>
+							<a href="#"><img src="{% static 'main_assets/img/partner/brand-2.png' %}" alt="image"></a>
+							<a href="#"><img src="{% static 'main_assets/img/partner/brand-1.png' %}" alt="image"></a>
+							<a href="#"><img src="{% static 'main_assets/img/partner/brand-4.png' %}" alt="image"></a>
+							<a href="#"><img src="{% static 'main_assets/img/partner/brand-3.png' %}" alt="image"></a>
 						</div>
 					</div><!-- END COL  -->
 				</div><!--END  ROW  -->
@@ -791,12 +800,12 @@
 		<!-- END COMPANY PARTNER LOGO -->
 
 		<!-- START FOOTER -->
-		<div class="footer" style="background-image: url(assets/img/bg/footer.png);  background-size:cover;">
+		<div class="footer" style="">
 			<div class="container">		
 				<div class="row">						
 					<div class="col-lg-3 col-sm-6 col-xs-12">
 						<div class="footer_logo">
-							<img src="assets/img/logo.png" alt="" />
+							<img src="{% static 'main_assets/img/logo.png' %}" alt="" />
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis dignissim.</p>
 						</div>
 						<div class="social_profile">
@@ -854,40 +863,40 @@
 		<!-- END FOOTER -->	
 
 		<!-- Latest jQuery -->
-			<script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-1.12.4.min.js"></script>
+			<script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script><script src="{% static 'main_assets/js/jquery-1.12.4.min.js' %}"></script>
 		<!-- Latest compiled and minified Bootstrap -->
-			<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+			<script src="{% static 'main_assets/bootstrap/js/bootstrap.min.js' %}"></script>
 		<!-- modernizer JS -->		
-			<script src="assets/js/modernizr-2.8.3.min.js"></script>																		
+			<script src="{% static 'main_assets/js/modernizr-2.8.3.min.js' %}"></script>																		
 		<!-- owl-carousel min js  -->
-			<script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
+			<script src="{% static 'main_assets/owlcarousel/js/owl.carousel.min.js' %}"></script>
 		<!-- jquery nav -->
-			<script src="assets/js/jquery.nav.js"></script>	
+			<script src="{% static 'main_assets/js/jquery.nav.js' %}"></script>	
 		<!-- jquery.slicknav -->
-			<script src="assets/js/jquery.slicknav.js"></script>	
+			<script src="{% static 'main_assets/js/jquery.slicknav.js' %}"></script>	
 		<!-- jquery.smooth-scroll -->
-			<script src="assets/js/smooth-scroll.js"></script>			
+			<script src="{% static 'main_assets/js/smooth-scroll.js' %}"></script>			
 		<!-- magnific-popup js -->               
-			<script src="assets/js/jquery.magnific-popup.min.js"></script>			
+			<script src="{% static 'main_assets/js/jquery.magnific-popup.min.js' %}"></script>			
 		<!-- jquery mixitup js -->   
-			<script src="assets/js/jquery.mixitup.js"></script>	
+			<script src="{% static 'main_assets/js/jquery.mixitup.js' %}"></script>	
 		<!-- Venobox JS -->	
-			<script src="assets/js/venobox.min.js"></script>			
+			<script src="{% static 'main_assets/js/venobox.min.js' %}"></script>			
 		<!-- PARTICLE JS -->
-			<script src="assets/js/particles.min.js"></script>	
-			<script src="assets/js/app.js"></script>				
+			<script src="{% static 'main_assets/js/particles.min.js' %}"></script>	
+			<script src="{% static 'main_assets/js/app.js' %}"></script>				
 		<!-- stellar js -->
-			<script src="assets/js/jquery.stellar.min.js"></script>	
+			<script src="{% static 'main_assets/js/jquery.stellar.min.js' %}"></script>	
 		<!-- jquery appear js -->
-			<script src="assets/js/jquery.appear.js"></script>			
+			<script src="{% static 'main_assets/js/jquery.appear.js' %}"></script>			
 		<!-- countTo js -->
-			<script src="assets/js/jquery.inview.min.js"></script>				
+			<script src="{% static 'main_assets/js/jquery.inview.min.js' %}"></script>				
 		<!-- scrolltopcontrol js -->
-			<script src="assets/js/scrolltopcontrol.js"></script>												
+			<script src="{% static 'main_assets/js/scrolltopcontrol.js' %}"></script>												
 		<!-- ripples js -->	
-			<script src="assets/js/ripples-min.js"></script>		
+			<script src="{% static 'main_assets/js/ripples-min.js' %}"></script>		
 		<!-- scripts js -->
-			<script src="assets/js/scripts.js"></script>
+			<script src="{% static 'main_assets/js/scripts.js' %}"></script>
     </body>
 
 <!-- Mirrored from bestwpware.com/html/tf/minton-item/minton/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jun 2024 07:59:32 GMT -->
