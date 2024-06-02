@@ -1,0 +1,36 @@
+{% extends 'uifiles/single_base.html' %}
+{% load static %}
+{% block content %}
+ <!--  Body Wrapper -->
+ <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+ data-sidebar-position="fixed" data-header-position="fixed">
+ <div
+   class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+   <div class="d-flex align-items-center justify-content-center w-100">
+     <div class="row justify-content-center w-100">
+       <div class="col-md-8 col-lg-6 col-xxl-3">
+         <div class="card mb-0 otp-card">
+           <div class="card-body">
+             <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
+               <img src="{% static 'dashboard_assets/images/logos/logo.png' %}" width="100" alt="">
+             </a>
+             <h4 class="text-center mb-3">Please Login</h4>
+             <form>
+                {% csrf_token %}
+               <div class="input-group  mb-3">
+                <span class="input-group-text" id="basic-addon1">+91</span>
+                 <input type="number" class="form-control" placeholder="Please enter phone number" id="phone_number" name="phone_number" aria-describedby="emailHelp">
+               </div>
+               <div class="d-flex justify-content-center">
+                <button type="button" class="request-btn" id="request-otp" onclick="sendOTP()">Request OTP</button>
+               </div>
+             </form>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+{% endblock %}
+
